@@ -18,6 +18,13 @@ class Show
             'Ecoles' => 15,
     ];
 
+    const WEEKENDS = [
+        'Adultes' => 25,
+        'Enfants' => 15,
+        'Groupes' => 20,
+        'Ecoles' => 17,
+    ];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()

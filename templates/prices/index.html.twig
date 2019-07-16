@@ -1,25 +1,51 @@
 {% extends 'base.html.twig' %}
 
+{% block title %} Nos Tarifs {% endblock %}
+
 {% block body %}
-<table class="table prices">
-    <thead>
-    <tr>
-        <th>Adulte</th>
-        <th>Enfant</th>
-        <th>Groupe</th>
-        <th>Ecole</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td> </td>
-    </tr>
-        <tr>
-            <td>{{ constant("App\\Entity\\Show::PRICES") ['Adultes'] }} €</td>
-            <td>{{ constant("App\\Entity\\Show::PRICES") ['Enfants'] }} €</td>
-            <td>{{ constant("App\\Entity\\Show::PRICES") ['Groupes'] }} €</td>
-            <td>{{ constant("App\\Entity\\Show::PRICES") ['Ecoles'] }} €</td>
-        </tr>
-    </tbody>
-</table>
+
+    <h1>Nos Tarifs</h1>
+
+    <div class="prices col-10">
+
+        <h2>Semaine (hors mercredi)</h2>
+        <table class="table col-10">
+            <tr>
+                <th>Adulte</th>
+                <th>Enfant</th>
+                <th>Groupe</th>
+                <th>Ecole</th>
+            </tr>
+            <tbody>
+            <tr>
+                <td>{{ constant("App\\Entity\\Show::PRICES") ['Adultes'] }} €</td>
+                <td>{{ constant("App\\Entity\\Show::PRICES") ['Enfants'] }} €</td>
+                <td>{{ constant("App\\Entity\\Show::PRICES") ['Groupes'] }} €</td>
+                <td>{{ constant("App\\Entity\\Show::PRICES") ['Ecoles'] }} €</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="prices col-10">
+
+        <h2>Week-ends et mercredi</h2>
+        <table class="table col-10">
+            <tr>
+                <th>Adulte</th>
+                <th>Enfant</th>
+                <th>Groupe</th>
+                <th>Ecole</th>
+            </tr>
+            <tbody>
+            <tr>
+                <td>{{ constant("App\\Entity\\Show::WEEKENDS") ['Adultes'] }} €</td>
+                <td>{{ constant("App\\Entity\\Show::WEEKENDS") ['Enfants'] }} €</td>
+                <td>{{ constant("App\\Entity\\Show::WEEKENDS") ['Groupes'] }} €</td>
+                <td>{{ constant("App\\Entity\\Show::WEEKENDS") ['Ecoles'] }} €</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
 {% endblock %}
