@@ -24,7 +24,7 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\show", mappedBy="category")
+     * @ORM\OneToMany(targetEntity="App\Entity\Show", mappedBy="category")
      */
     private $category;
 
