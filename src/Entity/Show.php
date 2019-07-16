@@ -12,12 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
 class Show
 {
     const PRICES = [
-        [
-            'Adultes' => '20',
-            'Enfants' => '10',
-            'Groupes' => '17',
-            'Ecoles' => '15',
-        ]
+            'Adultes' => 20,
+            'Enfants' => 10,
+            'Groupes' => 17,
+            'Ecoles' => 15,
     ];
 
     /**

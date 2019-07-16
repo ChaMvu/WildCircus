@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PriceController extends AbstractController
 {
     /**
-     * @Route("/prices")
+     * @Route("/prices", name="show_prices")
      */
     public function index()
     {
