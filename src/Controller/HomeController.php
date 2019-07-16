@@ -15,10 +15,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home")
+     * @Route("/home", name="home", methods={"GET"})
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index(){
-            return $this->render('default.html.twig');
+            return $this->render('home/index.html.twig');
         }
 }
