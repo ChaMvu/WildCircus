@@ -1,76 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bienvenue ! {% endblock %}
-
 {% block body %}
-    <div class="container-fluid">
 
-
-        <h1>Bienvenue au Wild Circus !</h1>
-
-        <div class="col-12 home-cards">
-            {% for i in 0..0  %}
-
-            <div class="card col-3 col-xs-12" style="width: 100%;">
-                <img class="card-img-top" src="{{ absolute_url(asset('images/spectacle.jpg')) }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Nos spectacles</h5>
-                    <p class="card-text">{{ shows[i].description }}</p>
-                    <div class="col text-center">
-                        <a href="{{ path('show_index') }}" class="btn btn-info">Spectacles</a>
-                    </div>
-
-                </div>
-            </div>
-
-            {% endfor %}
-
-
-            <div class="card col-3 col-xs-12" style="width: 100%;">
-                <img class="card-img-top" src="{{ absolute_url(asset('images/ticket2.jpg')) }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Nos tarifs</h5>
-                    <p class="card-text">Pontem est vi nive supercilia itaque nimia callibus vetabantur et et undique difficultatibus obrutis convolantibus magnis prope ritu ritu inpossibile navium telis et multitudine itaque attonitus imperator resistente telis telis.</p>
-                    <div class="col text-center">
-                        <a href="{{ path('show_prices') }}" class="btn btn-info">Prix</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card col-3 col-xs-12" style="width: 100%;">
-                <img class="card-img-top" src="{{ absolute_url(asset('images/contact.jpg')) }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Nous contacter</h5>
-                    <p class="card-text">Pontem est vi nive supercilia itaque nimia callibus vetabantur et et undique difficultatibus obrutis convolantibus magnis prope ritu ritu inpossibile navium telis et multitudine itaque attonitus imperator resistente telis telis.</p>
-                    <div class="col text-center">
-                        <a href="{{ path('contact') }}" class="btn btn-info">Contact</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="description col-12">
-
-            <h2>Notre histoire</h2>
-
-            <div class="description-details col-10">
-
-                    <img class="img-fluid col-6" src="{{ absolute_url(asset('images/final.png')) }}" alt="wildCircus" >
-                    <p class="description-text col-4">
-                        Euphrate brevi aliaque convenit Macedonum consueta quae initium annua spatio Indi ad spatio ad ad Anthemusia magna aliaque mensis annua convenit annua disparatur in Seres consueta Septembris marique disparatur promiscuae.
-
-                        Supplicationem causa dierum satis non meum erat pertinerent reprehendant dierum que quid satis magis ad dierum hac causa admirentur quot gratulatio dierum dignitati hac magis magis Rei consilium quid maximis dignitati hominis tot est cum que hac immortalibus homines sententia dignitati tributus in publicae ad publicae magis et erat causa satis dierum quod erat homines quam admirentur ad necessitatem cumulus ad hominis hac et Rei dierum multa necessitatem idem consilium ille tot que reprehendant eadem ille ad sententia erat exigua pertinerent antea publicae ego exigua rei dignitati ad est gratulatio Ergo dignitatem reprehendant ad hominis in quot ego consilium quod.
-                    </p>
-            </div>
-
-        </div>
-
-
-
-    </div>
-
-
+    <h1>Bienvenue au Wild Circus !</h1>
 
 {% endblock %}

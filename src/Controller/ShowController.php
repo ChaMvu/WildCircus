@@ -41,7 +41,6 @@ class ShowController extends AbstractController
 
             return $this->redirectToRoute('show_index');
         }
-
         return $this->render('show/new.html.twig', [
             'show' => $show,
             'form' => $form->createView(),
@@ -53,6 +52,7 @@ class ShowController extends AbstractController
      */
     public function show(Show $show): Response
     {
+
         return $this->render('show/show.html.twig', [
             'show' => $show,
         ]);
