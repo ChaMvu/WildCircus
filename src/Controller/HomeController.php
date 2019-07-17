@@ -9,17 +9,21 @@
 namespace App\Controller;
 
 
+use App\Repository\ShowRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index(){
-            return $this->render('home/index.html.twig');
-        }
+    public function index(ShowRepository $showRepository)
+    {
+        return $this->render('home/index.html.twig', [
+            'shows' => $showRepository->findAll(),
+        ]);
+    }
 }
 
