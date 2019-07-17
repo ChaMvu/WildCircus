@@ -1,18 +1,36 @@
-@import "~bootstrap/scss/bootstrap" ;
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merienda&display=swap');
 
 body {
     background-color: white;
 }
 
+
+/* ==================================== General ======================================*/
 h1 {
     font-weight: bold;
     text-align: center;
+    font-family: 'Merienda', cursive;
 }
 
 h2 {
     margin-bottom: 20px;
     text-align: center;
 }
+
+/* ==================================== Navbar ======================================*/
+
+.navbar {
+     margin-bottom: 30px;
+ }
+
+.logo {
+    width: 80px;
+    height: 70px;
+}
+
+/* ==================================== Prix ======================================*/
 
 .prices {
     margin-top: 30px;
@@ -23,6 +41,39 @@ h2 {
         }
 }
 
-.navbar {
-    margin-bottom: 30px;
+/* ==================================== Home ======================================*/
+
+h2{
+    font-family: 'Indie Flower', cursive;
+}
+
+.description-details{
+    display: flex;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.home-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.description {
+    margin-top: 30px;
+}
+
+.description-text {
+    margin-top: 40px;
+    margin-left: 60px;
+    text-align: center;
 }
