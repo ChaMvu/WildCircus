@@ -8,8 +8,23 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="App\Repository\ShowRepository")
  * @ORM\Table("`show`")
  */
+
 class Show
 {
+    const PRICES = [
+            'Adultes' => 20,
+            'Enfants' => 10,
+            'Groupes' => 17,
+            'Ecoles' => 15,
+    ];
+
+    const WEEKENDS = [
+        'Adultes' => 25,
+        'Enfants' => 15,
+        'Groupes' => 20,
+        'Ecoles' => 17,
+    ];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
