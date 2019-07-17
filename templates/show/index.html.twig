@@ -9,56 +9,59 @@
 
     <h1>Nos Spectacles</h1>
 
+    <div class="spectacles col-10">
 
         {% for show in shows %}
 
-            <div class="card mb-3">
-                <img src="{{ absolute_url(asset('images/magician.jpg')) }}" class="card-img-top shows" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Magie</h5>
-                    <p class="card-text">{{ show.description }}</p>
-                </div>
+        <div class="card mb-3">
+            <img src="{{ absolute_url(asset('images/magician.jpg')) }}" class="card-img-top shows" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Magie</h5>
+                <p class="card-text">{{ show.description }}</p>
             </div>
+        </div>
 
-            <div class="card mb-3">
-                <img src="{{ absolute_url(asset('images/lions.jpg')) }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Animaux</h5>
-                    <p class="card-text">{{ show.description }}</p>
-                </div>
+        <div class="card mb-3">
+            <img src="{{ absolute_url(asset('images/lions.jpg')) }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Animaux</h5>
+                <p class="card-text">{{ show.description }}</p>
             </div>
+        </div>
 
-            <div class="card mb-3">
-                <img src="{{ absolute_url(asset('images/acrobats.jpg')) }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Acrobates</h5>
-                    <p class="card-text">{{ show.description }}</p>
-                </div>
+        <div class="card mb-3">
+            <img src="{{ absolute_url(asset('images/acrobats.jpg')) }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Acrobates</h5>
+                <p class="card-text">{{ show.description }}</p>
             </div>
+        </div>
 
-            <div class="card mb-3">
-                <img src="{{ absolute_url(asset('images/clown.jpg')) }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Clowns</h5>
-                    <p class="card-text">{{ show.description }}</p>
-                </div>
+        <div class="card mb-3">
+            <img src="{{ absolute_url(asset('images/clown.jpg')) }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Clowns</h5>
+                <p class="card-text">{{ show.description }}</p>
             </div>
+        </div>
 
-            <div class="card mb-3">
-                <img src="{{ absolute_url(asset('images/juggler1.jpg')) }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Jongleurs</h5>
-                    <p class="card-text">{{ show.description }}</p>
-                </div>
+        <div class="card mb-3">
+            <img src="{{ absolute_url(asset('images/juggler1.jpg')) }}" class="card-img-top show-img" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Jongleurs</h5>
+                <p class="card-text">{{ show.description }}</p>
             </div>
+        </div>
 
-            <div class="card mb-3">
-                <img src="{{ absolute_url(asset('images/fireeater.jpg')) }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Cracheurs de feu</h5>
-                    <p class="card-text">{{ show.description }}</p>
-                </div>
+        <div class="card mb-3">
+            <img src="{{ absolute_url(asset('images/fireeater.jpg')) }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cracheurs de feu</h5>
+                <p class="card-text">{{ show.description }}</p>
             </div>
+        </div>
+
+    </div>
 
 
     </div>
