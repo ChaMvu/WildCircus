@@ -11,14 +11,14 @@
         <div class="col-12 home-cards">
             {% for i in 0..0  %}
 
-                <div class="card col-3 col-xs-12" style="width: 100%;">
-                    <img class="card-img-top" src="{{ absolute_url(asset('images/spectacle.jpg')) }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Nos spectacles</h5>
-                        <p class="card-text">{{ shows[i].description }}</p>
-                        <div class="col text-center">
-                            <a href="{{ path('show_index') }}" class="btn btn-info">Spectacles</a>
-                        </div>
+            <div class="card col-3 col-xs-12" style="width: 100%;">
+                <img class="card-img-top" src="{{ absolute_url(asset('images/spectacle.jpg')) }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Nos spectacles</h5>
+                    <p class="card-text">{{ shows[i].description|striptags|slice(0, 220) }}</p>
+                    <div class="col text-center">
+                        <a href="{{ path('show_index') }}" class="btn btn-info">Spectacles</a>
+                    </div>
 
                     </div>
                 </div>
