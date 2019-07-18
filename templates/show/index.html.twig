@@ -10,11 +10,12 @@
     <h1>Nos Spectacles</h1>
 
     <div class="spectacles col-10">
+        {% set break = false %}
 
-        {% for show in shows %}
+        {% for show in shows if not break %}
 
         <div class="card mb-3">
-            <img src="{{ absolute_url(asset('images/magician.jpg')) }}" class="card-img-top shows" alt="...">
+            <img src="{{ absolute_url(asset('images/magician.jpg')) }}" class="card-img-top shows" alt="Magie">
             <div class="card-body">
                 <h5 class="card-title">Magie</h5>
                 <p class="card-text">{{ show.description }}</p>
@@ -22,7 +23,7 @@
         </div>
 
         <div class="card mb-3">
-            <img src="{{ absolute_url(asset('images/lions.jpg')) }}" class="card-img-top" alt="...">
+            <img src="{{ absolute_url(asset('images/lions.jpg')) }}" class="card-img-top" alt="Animaux">
             <div class="card-body">
                 <h5 class="card-title">Animaux</h5>
                 <p class="card-text">{{ show.description }}</p>
@@ -30,7 +31,7 @@
         </div>
 
         <div class="card mb-3">
-            <img src="{{ absolute_url(asset('images/acrobats.jpg')) }}" class="card-img-top" alt="...">
+            <img src="{{ absolute_url(asset('images/acrobats.jpg')) }}" class="card-img-top" alt="Acrobates">
             <div class="card-body">
                 <h5 class="card-title">Acrobates</h5>
                 <p class="card-text">{{ show.description }}</p>
@@ -38,7 +39,7 @@
         </div>
 
         <div class="card mb-3">
-            <img src="{{ absolute_url(asset('images/clown.jpg')) }}" class="card-img-top" alt="...">
+            <img src="{{ absolute_url(asset('images/clown.jpg')) }}" class="card-img-top" alt="Clowns">
             <div class="card-body">
                 <h5 class="card-title">Clowns</h5>
                 <p class="card-text">{{ show.description }}</p>
@@ -46,7 +47,7 @@
         </div>
 
         <div class="card mb-3">
-            <img src="{{ absolute_url(asset('images/juggler1.jpg')) }}" class="card-img-top show-img" alt="...">
+            <img src="{{ absolute_url(asset('images/juggler1.jpg')) }}" class="card-img-top show-img" alt="Jongleurs">
             <div class="card-body">
                 <h5 class="card-title">Jongleurs</h5>
                 <p class="card-text">{{ show.description }}</p>
@@ -54,18 +55,21 @@
         </div>
 
         <div class="card mb-3">
-            <img src="{{ absolute_url(asset('images/fireeater.jpg')) }}" class="card-img-top" alt="...">
+            <img src="{{ absolute_url(asset('images/fireeater.jpg')) }}" class="card-img-top" alt="Cracheurs de feu">
             <div class="card-body">
                 <h5 class="card-title">Cracheurs de feu</h5>
                 <p class="card-text">{{ show.description }}</p>
             </div>
         </div>
-
+            {% if show.id == 3 %}
+                {% set break = true %}
+            {% endif %}
+        {% endfor %}
     </div>
 
 
     </div>
 
-    {% endfor %}
+
 
 {% endblock %}
