@@ -6,32 +6,30 @@
 
     <h1>Nous contacter</h1>
 
-<div class="form-group contact-form">
-
+    <div class="container contact-form">
     {{ form_start(form) }}
+        <div class="form-row form-identity">
+            <div class="form-group col-12 col-md-6">
+                {{ form_row(form.nom, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group col-12 col-md-6">
+                {{ form_row(form.prenom, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="form-group col-12">
+            {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group col-12">
+            {{ form_row(form.message, {'attr': {'class': 'form-control', 'rows' : '6'}}) }}
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-secondary">Envoyer</button>
+            </div>
+        </div>
 
-
-    <div class="form-group formulaire col-10">
-
-        <label for="lastname">{{ form_row(form.nom, {'attr': {'class': 'form-control'}}) }}</label>
-
-        <label for="firstname">{{ form_row(form.prenom, {'attr': {'class': 'form-control'}}) }}</label>
-    </div>
-
-    <div class="form-group col-10">
-        <label for="email"  >{{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}</label>
-    </div>
-
-    <div class="form-group col-10">
-        <label for="content"  >{{ form_row(form.message, {'attr': {'class': 'form-control'}}) }}</label>
-    </div>
-
-    <button type="submit" class="btn btn-secondary">Envoyer</button>
 
     {{ form_end(form) }}
-
-
-</div>
-
+    </div>
 
 {% endblock %}
